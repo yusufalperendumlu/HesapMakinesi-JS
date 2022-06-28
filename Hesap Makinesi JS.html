@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .numara{
+            width: 100%;
+            border: 1px solid;
+            
+        }
+        .ekran{
+            height: 25px;
+            border: 1px solid black; 
+        }
+        .islem{
+            background-color: gray;
+            width: 100%;
+        }
+        table{
+            border: 1px solid black;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <form name="hesapmakinesi">
+        <table>
+            <tr>
+                <th colspan="4">
+                    <input type="text" name="ekran" class="ekran">
+                </th>
+            </tr>
+            <tr>
+                  <td><button type="button" class="numara" onclick="document.hesapmakinesi.ekran.value+='1'">1</button></td>  
+                  <td> <button type="button" class="numara" onclick="document.hesapmakinesi.ekran.value+='2'">2</button></td>
+                  <td> <button type="button" class="numara" onclick="document.hesapmakinesi.ekran.value+='3'">3</button></td>
+                  <td> <button type="button" class="islem" onclick="document.hesapmakinesi.ekran.value+='+'">+</button></td>   
+            </tr>
+            <tr>
+                <td><button type="button" class="numara" onclick="document.hesapmakinesi.ekran.value+='4'">4</button></td>
+                <td><button type="button" class="numara" onclick="document.hesapmakinesi.ekran.value+='5'">5</button></td>
+                <td><button type="button" class="numara" onclick="document.hesapmakinesi.ekran.value+='6'">6</button></td>
+                <td><button type="button" class="islem" onclick="document.hesapmakinesi.ekran.value+='-'">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="numara" onclick="document.hesapmakinesi.ekran.value+='7'">7</button></td>
+                <td><button type="button" class="numara" onclick="document.hesapmakinesi.ekran.value+='8'">8</button></td>
+                <td><button type="button" class="numara" onclick="document.hesapmakinesi.ekran.value+='9'">9</button></td>
+                <td><button type="button" class="islem" onclick="document.hesapmakinesi.ekran.value+='*'">*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="islem" onclick="document.hesapmakinesi.ekran.value=''">C</button></td>
+                <td><button type="button" class="numara" onclick="document.hesapmakinesi.ekran.value+='0'">0</button></td>
+                <td><button type="button" class="islem" onclick="document.hesapmakinesi.ekran.value=eval(document.hesapmakinesi.ekran.value)">=</button></td>
+                <td><button type="button" class="islem" onclick="document.hesapmakinesi.ekran.value+='/'">/</button></td>
+
+            </tr>
+            <tr>
+                <td><button type="button" class="numara" onclick="document.hesapmakinesi.ekran.value+='%'">%</button></td>
+                <td><button type="button" class="numara" onclick="document.hesapmakinesi.ekran.value+='^2'">x <sup>2</sup></button></td>
+
+
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>
